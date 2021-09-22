@@ -1,0 +1,38 @@
+$primary-color: rgb(0, 151, 174);
+$secondary-color: rgb(53, 53, 53);
+
+
+.community {
+    .post {
+        .actions {
+            .upvote, .downvote, .comment, .report, .share {
+                margin: 10px 20px;
+                font-size: 18px;
+                cursor: pointer;
+                &:hover {
+                    color: $primary-color;
+                }
+                span {
+                    font-size: 15px;
+                    color: grey;
+                }
+            }
+            .like-counter {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-size: 12px;
+                margin: 10px 0px;
+                span {
+                    font-size: 10px;
+                    color: grey;
+                }
+            }
+            .upvote, .downvote {
+                border: 1px solid lightgrey;
+                border-radius: 5px;
+                padding: 5px;
+            }
+        }
+    }
+}

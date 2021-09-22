@@ -1,0 +1,66 @@
+.col-md-9 h2 {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .col-md-9 h2 {
+    margin-top: 60px;
+  }
+}
+
+.col-md-9 .row {
+  padding: 0;
+  margin: 20px 0;
+  height: auto;
+}
+
+.col-md-9 .row .col-sm .editModal {
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(0 0 0.4rem #e3e3e3);
+          filter: drop-shadow(0 0 0.4rem #e3e3e3);
+}
+
+.col-md-9 .row .col-sm .editModal .header {
+  background-color: #0097ae;
+  color: white;
+  padding: 10px 20px;
+}
+
+.col-md-9 .row .col-sm .editModal .header h4 {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.col-md-9 .row .col-sm .editModal form {
+  padding: 20px;
+  background-color: white;
+}
+
+.col-md-9 .row .col-sm .editModal form label {
+  font-weight: bold;
+  display: block;
+  margin: 15px 0 5px 0;
+}
+
+.col-md-9 .row .col-sm .editModal form input, .col-md-9 .row .col-sm .editModal form textarea {
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.col-md-9 .row .col-sm .editModal form hr {
+  margin-top: 30px;
+}
+
+.col-md-9 .row .col-sm .btn-primary {
+  background-color: #0097ae;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=postajob.css.map */

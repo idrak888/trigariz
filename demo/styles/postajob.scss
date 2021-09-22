@@ -1,0 +1,59 @@
+$primary-color: rgb(0, 151, 174);
+$secondary-color: rgb(53, 53, 53);
+
+.col-md-9 {
+    h2 {
+        margin-left: 10px;
+        margin-top: 20px; 
+        @media only screen and (max-width: 700px) {
+            margin-top: 60px; 
+        }
+    }
+    .row {
+        padding: 0;
+        margin: 20px 0;
+        height: auto;
+        .col-sm {
+            .editModal {
+                width: 100%;
+                background-color: white;
+                overflow: hidden;
+                border-radius: 10px;
+                filter: drop-shadow(0 0 0.4rem rgb(227, 227, 227));
+                .header {
+                    background-color: $primary-color;
+                    color: white;
+                    padding: 10px 20px;
+                    h4 {
+                        font-size: 16px;
+                        margin-top: 5px;
+                    }
+                }
+                form {
+                    padding: 20px;
+                    background-color: white;
+                    label {
+                        font-weight: bold;
+                        display: block;
+                        margin: 15px 0 5px 0;
+                    }
+                    input, textarea {
+                        width: 100%;
+                        border: 1px solid lightgrey;
+                        padding: 5px 10px;
+                        border-radius: 4px;
+                    }
+                    hr {
+                        margin-top: 30px;
+                    }
+                }
+            }
+            .btn-primary {
+                background-color: $primary-color;
+                max-width: 300px;
+                margin: auto;
+                margin-top: 20px;
+            }
+        }
+    }
+}

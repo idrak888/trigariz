@@ -1,0 +1,97 @@
+.contractors .contractor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 15px;
+  -webkit-filter: drop-shadow(0 0 0.4rem #e3e3e3);
+          filter: drop-shadow(0 0 0.4rem #e3e3e3);
+}
+
+.contractors .contractor .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 10px;
+  background-color: white;
+}
+
+.contractors .contractor .info img {
+  width: 100px;
+  margin: 0px 20px;
+}
+
+.contractors .contractor .info span {
+  display: block;
+  margin-top: 10px;
+}
+
+.contractors .contractor .info2 {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #f5f5f5;
+}
+
+.contractors .contractor .info2 p {
+  font-weight: bold;
+}
+
+.contractors .contractor .info2 .btn {
+  background-color: #0097ae;
+  color: white;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+}
+
+.contractors .contractor .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: white;
+  padding: 20px 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contractors .contractor .contact span {
+  margin: 0 10px;
+}
+
+.contractors .contractor .contact span i {
+  margin: 0 5px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .contractors .contractor .info, .contractors .contractor .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=contractor.css.map */

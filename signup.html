@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/png" href="./assets/logo.png"/>
+    <link rel="shortcut icon" type="image/png" href="demo/assets/logo.png"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="demo/styles/login.css">
     <title>Trigariz | Sign up</title>
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="/feed.html"><img src="./assets/logo.png"/> <strong>Trigariz</strong></a>
+            <a class="navbar-brand" href="/feed.html"><img src="demo/assets/logo.png"/> <strong>Trigariz</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="/feed.html#news">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="/feed.html#community">Community Wall</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/feed.html#contractors">Local Services</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -35,17 +38,17 @@
                         <a href="/login.html"><div class="btn">Log in</div></a>
                     </div>
                     <div class="auth-link">
-                        <a href="/signup.html"><div class="btn btn-primary">Create an account</div></a>
+                        <a href="/signup.html"><div class="btn btn-primary">Sign up</div></a>
                     </div>
                 </form>
             </div>
         </div>
     </nav>
 
-    <div class="wrapper">
+    <div class="wrapper" style="margin-top: 150px;">
         <div class="container">
             <div class="signup-form">
-                <form action="/examples/actions/confirmation.php" method="post">
+                <form action="/examples/actions/confirmation.html" method="post">
                     <h2>Sign Up</h2>
                     <p>Please fill in this form to create an account!</p>
                     <hr>
@@ -59,11 +62,13 @@
                         <input type="email" class="form-control" name="email" placeholder="Email" required="required">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                        <input type="password" class="form-control password-input" name="password" placeholder="Password" required="required">
+                        <a class="show" style="cursor: pointer; color: blue; text-decoration: underline;">Show/hide</a>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
-                    </div>        
+                        <input type="password" class="form-control password-input" name="confirm_password" placeholder="Confirm Password" required="required">
+                        <a class="show" style="cursor: pointer; color: blue; text-decoration: underline;">Show/hide</a>
+                    </div>     
                     <div class="form-group">
                         <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
                     </div>
@@ -77,6 +82,19 @@
     </div>
     
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+            $(document).ready(() => {
+                $(".show").click(function() {
+                    const x = $(this).parent().children(".password-input");
+                    
+                    if (x.attr("type") === "password") {
+                        x.attr("type", "text");
+                    } else {
+                        x.attr("type", "password");
+                    }
+                });
+            });
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>

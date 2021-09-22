@@ -1,0 +1,46 @@
+$primary-color: rgb(0, 151, 174);
+$secondary-color: rgb(53, 53, 53);
+
+.browseJobs {
+    .job-wrapper {
+        background-color: white;
+        border-radius: 6px;
+        width: 100%;
+        margin-top: 15px;
+        filter: drop-shadow(0 0 0.3rem rgb(227, 227, 227));
+        .img-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 15px 10px;
+            div {
+                flex: 1;
+                img {
+                    width: 100%;
+                }
+            }
+            .details {
+                padding: 0 10px;
+                flex: 1;
+                span {
+                    display: block;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .description {
+            padding: 10px 15px;
+            h3 {
+                font-weight: bold;
+            }
+        }
+        .contact {
+            padding: 15px 10px;
+            border-top: 1px solid lightgrey;
+            .btn-primary {
+                background-color: $primary-color;
+            }
+        }
+    }
+}

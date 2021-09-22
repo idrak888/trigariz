@@ -1,0 +1,39 @@
+.community .post .actions .upvote, .community .post .actions .downvote, .community .post .actions .comment, .community .post .actions .report, .community .post .actions .share {
+  margin: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.community .post .actions .upvote:hover, .community .post .actions .downvote:hover, .community .post .actions .comment:hover, .community .post .actions .report:hover, .community .post .actions .share:hover {
+  color: #0097ae;
+}
+
+.community .post .actions .upvote span, .community .post .actions .downvote span, .community .post .actions .comment span, .community .post .actions .report span, .community .post .actions .share span {
+  font-size: 15px;
+  color: grey;
+}
+
+.community .post .actions .like-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-size: 12px;
+  margin: 10px 0px;
+}
+
+.community .post .actions .like-counter span {
+  font-size: 10px;
+  color: grey;
+}
+
+.community .post .actions .upvote, .community .post .actions .downvote {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 5px;
+}
+/*# sourceMappingURL=vote.css.map */

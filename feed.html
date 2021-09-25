@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyD__Krjk05sSt3-xK4_Uez3s_m_8ZXzJ4Q"></script>
+    
     <link rel="stylesheet" href="demo/styles/feed.css">
     <link rel="stylesheet" href="demo/preloader/preloader.css">
     <link rel="stylesheet" href="demo/styles/contractor.css">
@@ -29,7 +30,7 @@
             </a>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/home.html">Home</a>
                     </li>
@@ -42,7 +43,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/feed.html#contractors">Local Services</a>
                     </li>
-                </ul> -->
+                </ul>
             </div>
             <form class="form-inline my-2 my-lg-0">
                 <div class="auth-link">
@@ -133,10 +134,7 @@
             <h3>Create an account <i style="float: right;cursor:pointer;color:grey;" class="fa fa-times"></i></h3>
             <hr>
             <div class="form-group">
-                <div class="row">
-                    <div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
-                    <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
-                </div>        	
+                <input type="text" class="form-control" name="name" placeholder="Name" required="required">
             </div>
             <div class="form-group">
                 <input type="email" class="form-control" name="email" placeholder="Email" required="required">
@@ -392,23 +390,55 @@
                         <h4 class="feed-type">Browse Local Services</h4>
                         <span class="feed-description">Find available local contractors and services near you.</span>
 
+                        <div class="contractors-filter">
+                            <h5>Filter listings</h5>
+                            <div class="dropdown-container">
+                                <div class="dropdown">
+                                    <button value="Category" style="color: rgb(110, 110, 110);text-align: left;" class="form-control dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Category
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <div class="dropdown-item">Tiling</div>
+                                        <div class="dropdown-item">Plumbing</div>
+                                        <div class="dropdown-item">Wiring</div>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button value="Location" style="color: rgb(110, 110, 110);text-align: left;" class="form-control dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Location
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <div class="dropdown-item">Ampang Hilir</div>
+                                        <div class="dropdown-item">Cheras</div>
+                                        <div class="dropdown-item">KL Sentral</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-light">Apply Filters</button>
+                        </div>
+
                         <div class="contractor">
                             <div class="info">
                                 <img src="/demo/assets/fixit.png">
                                 <div class="details">
                                     <strong>AAA Fix-It</strong>
                                     <span><i class="fa fa-map-marker"></i> 64, Jalan Putra, Chow Kit, 50350 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</span>
-                                    <span><a href="https://www.aaa.my/">https://www.aaa.my/</a></span>
+                                    <span><a href="https://wa.me/60340455090"><i class="fa fa-whatsapp"></i> +60340455090</a></span>
                                 </div>
                             </div>
                             <div class="info2">
-                                <p>Kuala Lumpur Handyman Service for Home and Office</p>
-                                <button class="btn">Get a Quote</button>
+                                <p>Make your home like a paradise with NusaraBina!</p>
+                                <div class="btn-container">
+                                    <button class="btn">Get a Quote</button>
+                                    <button class="btn">Message <i class="fa fa-paper-plane"></i></button>
+                                </div>
                             </div>
-                            <div class="contact">
-                                <span><i class="fa fa-envelope"></i> info@aaa.my</span>
-                                <span><i class="fa fa-whatsapp"></i> 03 - 4045 5090</span>
-                                <span><i class="fa fa-phone-square"></i>+60340455090</span>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
                             </div>
                         </div>
 
@@ -418,17 +448,22 @@
                                 <div class="details">
                                     <strong>NUSARA Bina PMC</strong>
                                     <span><i class="fa fa-map-marker"></i> P2-1-06, The Zizz, Damansara North, 47830, Petaling Jaya, Selangor.</span>
-                                    <span><a href="https://nusarabina.com/">https://nusarabina.com/</a></span>
+                                    <span><a href="https://wa.me/60340455090"><i class="fa fa-whatsapp"></i> +60340455090</a></span>
                                 </div>
                             </div>
                             <div class="info2">
                                 <p>Make your home like a paradise with NusaraBina!</p>
-                                <button class="btn">Get a Quote</button>
+                                <div class="btn-container">
+                                    <button class="btn">Get a Quote</button>
+                                    <button class="btn">Message <i class="fa fa-paper-plane"></i></button>
+                                </div>
                             </div>
-                            <div class="contact">
-                                <span><i class="fa fa-envelope"></i> hi@nusarabina.com</span>
-                                <span><i class="fa fa-whatsapp"></i> +60145306542</span>
-                                <span><i class="fa fa-phone-square"></i> +60145306542</span>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
                             </div>
                         </div>
 
@@ -470,6 +505,7 @@
                 $(".login-sidebar").show(150);
                 $(".backdrop").show();
                 $(".login-sidebar #signup").hide();
+                $(".login-sidebar #login").show();
 
                 $(".login-sidebar a").click(function() {
                     $(".login-sidebar form").hide();
@@ -508,6 +544,22 @@
                 const activeImg = $(this).children(".active").children("img");
                 $("#imageModal").modal("show");
                 $("#imageModal .modal-body img").attr("src", activeImg.attr("src"));
+            });
+
+            $(".actions .upvote").click(function(e) {
+                $(this).parent().children(".downvote").removeClass("active");
+                $(this).addClass("active");
+            });
+
+            $(".actions .downvote").click(function(e) {
+                $(this).parent().children(".upvote").removeClass("active");
+                $(this).addClass("active");
+            });
+
+            $(".dropdown-item").click(function() {
+                var btn = $(this).parent().parent().children("button");
+                btn.text($(this).text());
+                btn.val($(this).text());
             });
         });
     </script>

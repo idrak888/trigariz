@@ -10,7 +10,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyD__Krjk05sSt3-xK4_Uez3s_m_8ZXzJ4Q"></script>
     <link rel="stylesheet" href="demo/styles/feed.css">
     <link rel="stylesheet" href="demo/preloader/preloader.css">
-    <link rel="stylesheet" href="demo/styles/edit-profile.css">
+    <link rel="stylesheet" href="demo/styles/edit-po-profile.css">
+    <link rel="stylesheet" href="multiple-select-plugin/dist/css/bootstrap-multiselect.css" type="text/css">
     <title>Trigariz | Local Insights and Community Posts</title>
 </head>
 <body>
@@ -28,7 +29,7 @@
             </a>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/home.html">Home</a>
                     </li>
@@ -41,12 +42,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Local Services</a>
                     </li>
-                </ul> -->
+                </ul>
             </div>
             <form class="form-inline my-2 my-lg-0">
                 <div class="user-details dropdown">
                     <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span>Signed in as <strong>John Doe</strong></span>
+                        <span>Signed in as <strong>AAA Fix-it</strong></span>
                     </div>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#">Your posts</a>
@@ -78,36 +79,48 @@
     <div class="responsive-nav">
         <i class="fa fa-times close-nav" style="color: white;float:right;padding:20px;font-size:24px;"></i>
         <div class="links-wrapper">
-            <strong class="heading">Jobs</strong>
-            <hr/>
+                <strong class="heading">Jobs</strong>
+                <hr/>
 
-            <div class="link active" id="jobs">
-                <span>Browse Jobs</span>
-            </div>
-            <div class="link" id="activeJobs">
-                <span>Active Jobs</span>
-            </div>
-            <div class="link" id="completedJobs">
-                <span>Completed Jobs</span>
-            </div>
-            <div class="link" id="completedJobs">
-                <span>Payments</span>
-            </div>
-            
-            <br/>
-            <strong class="heading">Business Profile</strong>
-            <hr/>
-            <div class="link" id="viewProfile">
-                <span>View Profile</span>
-            </div>
-            <div class="link" id="editProfile">
-                <span>Edit Profile</span>
-            </div>
-            
-            <br/>
+                <div class="dropdown-link" id="services">
+                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                    <span>Jobs</span>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-wrapper">
+                        <div class="inner-link link active" id="browseJobs">
+                            <span>Browse Jobs</span>
+                        </div>
+                        <div class="inner-link link" id="activeJobs">
+                            <span>Active Jobs</span>
+                        </div>
+                        <div class="inner-link link" id="completedJobs">
+                            <span>Completed Jobs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="link" id="completedJobs">
+                    <span>Payments</span>
+                </div>
+                
+                <br/>
 
-            <div class="link promote">
-                Promote your business
+                <strong class="heading">EXPLORE</strong>
+                <hr/>
+
+                <div class="link" id="community">
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                    <span>Community</span>
+                </div>
+                <div class="link" id="news">
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                    <span>News and Insights</span>
+                </div>
+
+                <br/>
+
+                <a href="contractor-register.html"><div class="link promote">
+                    Promote your business
+                </div></a>
             </div>
         </div>
     </div>
@@ -130,30 +143,34 @@
                         <div class="results"></div>
                     </div>
                     <div class="links-wrapper">
-                        <strong class="heading">Jobs</strong>
+                        <strong class="heading">EXPLORE</strong>
                         <hr/>
 
-                        <div class="link active" id="jobs">
-                            <span>Browse Jobs</span>
+                        <div class="link active" id="community">
+                            <i class="fa fa-comments" aria-hidden="true"></i>
+                            <span>Community</span>
                         </div>
-                        <div class="link" id="activeJobs">
-                            <span>Active Jobs</span>
-                        </div>
-                        <div class="link" id="completedJobs">
-                            <span>Completed Jobs</span>
-                        </div>
-                        <div class="link" id="completedJobs">
-                            <span>Payments</span>
+                        <div class="link" id="news">
+                            <i class="fa fa-rss" aria-hidden="true"></i>
+                            <span>News and Insights</span>
                         </div>
                         
                         <br/>
-                        <strong class="heading">Business Profile</strong>
+                        <strong class="heading">FIND</strong>
                         <hr/>
-                        <div class="link" id="viewProfile">
-                            <span>View Profile</span>
+
+                        <div class="dropdown-link" id="services">
+                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                            <span>Local Services</span>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <div class="dropdown-wrapper">
+                                <a style="color: rgb(47, 47, 47); text-decoration:none;" href="post-a-job.html"><div class="inner-link">Post a job</div></a>
+                                <div class="inner-link link" id="contractors">Browse services</div>
+                            </div>
                         </div>
-                        <div class="link" id="editProfile">
-                            <span>Edit Profile</span>
+                        <div class="link" id="properties">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <span>Property for Sale</span>
                         </div>
                         
                         <br/>
@@ -164,84 +181,115 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h2>Edit Business Profile</h2>
+                    <h2>Business Details</h2>
                     <div class="row">
-                        <div class="col-sm">
+                        <div class="col-md-8">
                             <div class="editModal">
-                                <div class="header">
-                                    <h4>General</h4>
-                                </div>
                                 <form>
+                                    <img style="width: 150px;margin: 10px auto;display: block;border-radius: 50%;" src="demo/assets/jobs/profile-photo.png">
+
+                                    <a class="upgrade" href="subscription-contractor.html">
+                                        <img src="demo/assets/crown.png" alt="">
+                                        <span>Upgrade Plan</span>
+                                    </a>
+
+                                    <label>Brand Photo</label>
+
+                                    <input class="input-field" type="file">
+
+                                    <label>Services Category</label>
+                                    <select id="servicesDropdown" multiple="multiple">
+                                        <option value="Tiling">Tiling</option>
+                                        <option value="Painting">Painting</option>
+                                        <option value="Roofing">Roofing</option>
+                                        <option value="Plumbing">Plumbing</option>
+                                    </select>
+
                                     <label>Business Name</label>
-                                    <input type="text" placeholder="Sepadu Jaya">
+                                    <input class="input-field" type="text" placeholder="AAA Fix-it">
 
                                     <label>Business Description</label>
-                                    <input type="text" placeholder="Short Description">
+                                    <input class="input-field" type="text" placeholder="Short Description (services provided)">
                                     
-                                    <label>Category</label>
-                                    <input type="text" placeholder="Category">
+                                    <br>
+
+                                    <button style="margin-top: 8px;" class="btn btn-primary">Apply Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Insights</h5>
+
+                            <div class="insight">
+                                <div class="details">
+                                    <span><i class="fa fa-calendar" aria-hidden="true"></i> User since: 20-9-2021</span>
+                                </div>
+                            </div>
+                            <div class="insight">
+                                <div class="details">
+                                    <span><i class="fa fa-users" aria-hidden="true"></i> Total contributions: 25</span>
+                                </div>
+                            </div>
+
+                            <h5>Quick Links</h5>
+
+                            <a class="link posts">
+                                <div class="details">
+                                    <span><i class="fa fa-wrench" aria-hidden="true"></i> Active Jobs: 2</span><span class="badge badge-danger">4</span>
+                                </div>
+                            </a>
+                            <a class="link posts">
+                                <div class="details">
+                                    <span><i class="fa fa-wrench" aria-hidden="true"></i> Completed Jobs: 13</span><span class="badge badge-danger">4</span>
+                                </div>
+                            </a>
+                            <a class="link rewards">
+                                <div class="details">
+                                    <span><i class="fa fa-star" aria-hidden="true"></i> Rewards: 16</span><span class="badge badge-danger">2</span>
+                                </div>
+                            </a>
+                            <a class="link jobs">
+                                <div class="details">
+                                    <span><i class="fa fa-money" aria-hidden="true"></i> Payments</span><span class="badge badge-danger">1</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <h2>Location & Contact</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="editModal">
+                                <form>
+                                    <label>Preferred Locations</label>
+                                    <select id="locationsDropdown" multiple="multiple">
+                                        <option value="Gombak">Gombak</option>
+                                        <option value="Mont Kiar">Mont Kiara</option>
+                                        <option value="Bangsar">Bangsar</option>
+                                        <option value="Petaling Jaya">Petaling Jaya</option>
+                                    </select>
 
                                     <label>Business Address</label>
-                                    <input type="text" placeholder="Address">
+                                    <input class="input-field" type="text" placeholder="Address">
+
+                                    <label>Email Address</label>
+                                    <input class="input-field" type="text" placeholder="example@gmail.com">
 
                                     <label>Phone/Whatsapp</label>
-                                    <input type="text" placeholder="E.g: +60121872213">
-                                </form>
-                            </div>
-                        </div>
-                        <!-- <div class="col-sm">
-                            <div class="editModal">
-                                <div class="header">
-                                    <h4>Business Details</h4>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
-                    <div class="row">
-                        <div class="col-sm">
-                            <div class="editModal">
-                                <div class="header">
-                                    <h4>Photos</h4>
-                                </div>
-                                <form>
-                                    <label>Logo</label>
-                                    <input type="file">
+                                    <input class="input-field" type="text" placeholder="E.g: +60121872213">
 
-                                    <label>Cover</label>
-                                    <input type="file">
-                                    
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div class="editModal">
-                                <div class="header">
-                                    <h4>Social Media</h4>
-                                </div>
-                                <form>
-                                    <label>Website</label>
-                                    <input type="text" placeholder="e.g: trigariz.com">
-
-                                    <label>Facebook</label>
-                                    <input type="text" placeholder="e.g: facebook.com/trigariz">
-                                    
-                                    <label>Instagram</label>
-                                    <input type="text" placeholder="e.g: instagram.com/trigariz">
+                                    <button style="margin-top: 8px;" class="btn btn-primary">Apply Changes</button>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm">
-                            <button class="btn btn-primary btn-block">Apply Changes</button>
-                        </div>
-                    </div>
+                    <br>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="multiple-select-plugin/dist/js/bootstrap-multiselect.js"></script>
     <script>
         $(document).ready(() => {
             $(".login-sidebar").hide();
@@ -269,6 +317,22 @@
                 $("#imageModal").modal("show");
                 $("#imageModal .modal-body img").attr("src", activeImg.attr("src"));
             });
+
+            $('#servicesDropdown').multiselect({
+                // allows HTML content
+                enableHTML: false,
+                buttonWidth: '100%',
+                maxHeight: true,
+                includeSelectAllOption: true,
+            });
+            $('#locationsDropdown').multiselect({
+                // allows HTML content
+                enableHTML: false,
+                buttonWidth: '100%',
+                maxHeight: true,
+                includeSelectAllOption: true,
+            });
+
         });
     </script>
     <script src="demo/preloader/preloader.js"></script>

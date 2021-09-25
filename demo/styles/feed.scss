@@ -573,7 +573,8 @@ body {
                             display: flex;
                             align-items: center;
                             img {
-                                vertical-align: middle;
+                                height: 300px;
+                                object-fit: cover;
                             }
                         }
                     }
@@ -628,6 +629,9 @@ body {
                                 font-size: 15px;
                                 color: grey;
                             }
+                            @media only screen and (max-width: 500px) {
+                                font-size: 15px;
+                            }
                         }
                         .like-counter {
                             display: flex;
@@ -639,11 +643,25 @@ body {
                                 font-size: 10px;
                                 color: grey;
                             }
+                            @media only screen and (max-width: 500px) {
+                                span {
+                                    display: none;
+                                    font-size: 8px;
+                                }
+                            }
                         }
                         .upvote, .downvote {
                             border: 1px solid lightgrey;
                             border-radius: 5px;
                             padding: 5px;
+                            @media only screen and (max-width: 500px) {
+                                margin: 10px;
+                            }
+                        }
+                        .active {
+                            i {
+                                color: $primary-color;
+                            }
                         }
                     }
                     .comment-section {

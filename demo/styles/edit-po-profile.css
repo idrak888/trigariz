@@ -1,0 +1,237 @@
+body {
+  overflow-x: hidden;
+}
+
+.col-md-9 h2, .col-md-9 p {
+  margin-left: 10px;
+  margin-top: 20px;
+  color: #505050;
+}
+
+@media only screen and (max-width: 700px) {
+  .col-md-9 h2, .col-md-9 p {
+    margin-top: 60px;
+  }
+}
+
+.col-md-9 p {
+  margin-top: 10px;
+}
+
+.col-md-9 .btn-primary {
+  width: 100%;
+  max-width: 200px;
+  margin-top: 5px;
+}
+
+.col-md-9 .row {
+  margin: 0;
+  padding: 0;
+  margin: 20px 0;
+  height: auto;
+}
+
+.col-md-9 .row .col-md-4, .col-md-9 .row .col-md-8, .col-md-9 .row .col-md-12 {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.col-md-9 .row .col-md-4 form, .col-md-9 .row .col-md-8 form, .col-md-9 .row .col-md-12 form {
+  padding: 20px;
+}
+
+.col-md-9 .row .col-md-4 form .upgrade, .col-md-9 .row .col-md-8 form .upgrade, .col-md-9 .row .col-md-12 form .upgrade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 190px;
+  border-radius: 12px;
+  padding: 5px 10px;
+  border: 2px solid #ffc400;
+  color: #ffc400;
+  text-decoration: none;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.col-md-9 .row .col-md-4 form .upgrade img, .col-md-9 .row .col-md-8 form .upgrade img, .col-md-9 .row .col-md-12 form .upgrade img {
+  width: 25px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.col-md-9 .row .col-md-4 form label, .col-md-9 .row .col-md-8 form label, .col-md-9 .row .col-md-12 form label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px 0;
+  color: #505050;
+}
+
+.col-md-9 .row .col-md-4 form .input-field, .col-md-9 .row .col-md-8 form .input-field, .col-md-9 .row .col-md-12 form .input-field {
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.col-md-9 .row .col-md-4 form .multiselect-selected-text, .col-md-9 .row .col-md-8 form .multiselect-selected-text, .col-md-9 .row .col-md-12 form .multiselect-selected-text {
+  text-align: left;
+}
+
+.col-md-9 .row .col-md-4 form .multiselect-container, .col-md-9 .row .col-md-8 form .multiselect-container, .col-md-9 .row .col-md-12 form .multiselect-container {
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.col-md-9 .row .col-md-4 form .multiselect-container .form-check-input, .col-md-9 .row .col-md-8 form .multiselect-container .form-check-input, .col-md-9 .row .col-md-12 form .multiselect-container .form-check-input {
+  float: left;
+}
+
+.col-md-9 .row .col-md-4 .editModal label, .col-md-9 .row .col-md-8 .editModal label, .col-md-9 .row .col-md-12 .editModal label {
+  color: #505050;
+}
+
+.col-md-9 .row .col-md-4 .profile-details, .col-md-9 .row .col-md-8 .profile-details, .col-md-9 .row .col-md-12 .profile-details {
+  text-align: center;
+}
+
+.col-md-9 .row .col-md-4 .profile-details h3, .col-md-9 .row .col-md-8 .profile-details h3, .col-md-9 .row .col-md-12 .profile-details h3 {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.col-md-9 .row .col-md-4 .profile-details .items-container, .col-md-9 .row .col-md-8 .profile-details .items-container, .col-md-9 .row .col-md-12 .profile-details .items-container {
+  display: block;
+}
+
+.col-md-9 .row .col-md-4 .profile-details .items-container .item, .col-md-9 .row .col-md-8 .profile-details .items-container .item, .col-md-9 .row .col-md-12 .profile-details .items-container .item {
+  padding: 10px;
+  background-color: rgba(27, 167, 189, 0.685);
+  color: white;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.col-md-9 .row .col-md-4 {
+  background-color: white;
+  border: 1px solid #0097ae;
+  -webkit-filter: drop-shadow(0 0 0.3rem #e3e3e3);
+          filter: drop-shadow(0 0 0.3rem #e3e3e3);
+}
+
+.col-md-9 .row .col-md-4 h5 {
+  margin: 15px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.col-md-9 .row .col-md-4 .insight, .col-md-9 .row .col-md-4 .link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  background-color: white;
+  color: #505050;
+}
+
+.col-md-9 .row .col-md-4 .posts {
+  color: #1c5eec;
+  border: 1px solid #1c5eec;
+  -webkit-filter: drop-shadow(0 0 0.1rem rgba(28, 94, 236, 0.315));
+          filter: drop-shadow(0 0 0.1rem rgba(28, 94, 236, 0.315));
+  cursor: pointer;
+}
+
+.col-md-9 .row .col-md-4 .rewards {
+  color: #ecbb18;
+  border: 1px solid #ecbb18;
+  -webkit-filter: drop-shadow(0 0 0.1rem rgba(236, 186, 24, 0.315));
+          filter: drop-shadow(0 0 0.1rem rgba(236, 186, 24, 0.315));
+  cursor: pointer;
+}
+
+.col-md-9 .row .col-md-4 .jobs {
+  color: #17ca71;
+  border: 1px solid #17ca71;
+  -webkit-filter: drop-shadow(0 0 0.1rem rgba(23, 202, 112, 0.315));
+          filter: drop-shadow(0 0 0.1rem rgba(23, 202, 112, 0.315));
+  cursor: pointer;
+}
+
+.col-md-9 .row .col-md-4 .link {
+  text-decoration: none;
+}
+
+.col-md-9 .row .col-md-4 .link .details {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.col-md-9 .row .col-md-4 .link .details .badge {
+  justify-self: flex-end;
+}
+
+.col-md-9 .row .reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  overflow-x: scroll;
+  padding: 10px;
+  max-width: 100vw;
+}
+
+.col-md-9 .row .reviews .course {
+  width: 350px;
+}
+
+.col-md-9 .row .reviews .course img {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=edit-po-profile.css.map */

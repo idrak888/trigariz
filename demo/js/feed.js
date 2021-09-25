@@ -75,6 +75,7 @@ $(document).ready(() => {
 
     $(".media-upload input").change(function(e) {
         const files = [e.target.files][0];
+        console.log("upload");
         $(".media-upload").append('<button class="btn btn-secondary">Remove attachments</button>');
         for (let i=0;i<files.length;i++) {
             $(".media-upload").append('<div class="preview-wrapper"><img class="preview" src="#"/></div>');

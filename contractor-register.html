@@ -9,136 +9,150 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-        color: #fff;
-        background: #0097ae;
-        font-family: 'Roboto', sans-serif;
+            color: #fff;
+            background: #0097ae;
+            font-family: 'Roboto', sans-serif;
         }
 
         .navbar {
-        background-color: white;
+            background-color: white;
         }
 
         .navbar .fa-bars {
-        color: #353535;
+            color: #353535;
         }
 
         .navbar .collapse .form-inline .auth-link {
-        padding: 5px;
+            padding: 5px;
         }
 
         .navbar .collapse .form-inline .auth-link .btn {
-        color: black;
+            color: black;
         }
 
         .navbar .collapse .form-inline .auth-link .btn-primary {
-        background-color: #0097ae;
-        color: white;
+            background-color: #0097ae;
+            color: white;
         }
 
         .navbar .navbar-brand img {
-        width: 30px;
+            width: 30px;
         }
 
         .navbar .navbar-brand strong {
-        color: #353535;
-        margin: 0 10px 0 5px;
+            color: #353535;
+            margin: 0 10px 0 5px;
         }
 
         .wrapper {
-        margin-top: 100px;
+            margin-top: 100px;
         }
 
         .form-control {
-        height: 45px;
-        background: #f2f2f2;
-        -webkit-box-shadow: none !important;
+            height: 45px;
+            background: #f2f2f2;
+            -webkit-box-shadow: none !important;
                 box-shadow: none !important;
-        border: none;
+            border: none;
         }
 
         .form-control:focus {
-        background: #e2e2e2;
+            background: #e2e2e2;
         }
 
         .form-control, .btn {
-        border-radius: 3px;
+            border-radius: 3px;
         }
 
         .signup-form {
-        width: 100%;
-        max-width: 1000px;
-        margin: 30px auto;
+            width: 100%;
+            max-width: 1000px;
+            margin: 30px auto;
         }
 
         .signup-form form {
-        color: #999;
-        border-radius: 3px;
-        margin-bottom: 15px;
-        background: #fff;
-        -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-        padding: 30px;
+            color: #999;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            background: #fff;
+            -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
         }
 
         .signup-form h2 {
-        color: #333;
-        font-weight: bold;
-        margin-top: 0;
+            color: #333;
+            font-weight: bold;
+            margin-top: 0;
         }
 
         .signup-form hr {
-        margin: 0 -30px 20px;
+            margin: 0 -30px 20px;
         }
 
         .signup-form .form-group {
-        margin-bottom: 20px;
+            margin-bottom: 20px;
         }
 
         .signup-form input[type="checkbox"] {
-        margin-top: 3px;
+            margin-top: 3px;
         }
 
         .signup-form input[type="file"] {
-        border: 1px dashed #0097ae;
+            border: 1px dashed #0097ae;
         }
 
         .signup-form .btn {
-        font-size: 16px;
-        font-weight: bold;
-        background: #3598dc;
-        border: none;
-        width: 100%;
-        max-width: 200px;
+            font-size: 16px;
+            font-weight: bold;
+            background: #3598dc;
+            border: none;
+            width: 100%;
+            max-width: 200px;
         }
 
         .signup-form .btn:hover, .signup-form .btn:focus {
-        background: #2389cd !important;
-        outline: none;
+            background: #2389cd !important;
+            outline: none;
         }
 
         .signup-form a {
-        color: #fff;
-        text-decoration: underline;
+            color: #fff;
+            text-decoration: underline;
         }
 
         .signup-form a:hover {
-        text-decoration: none;
+            text-decoration: none;
         }
-
         .signup-form form a {
-        color: #3598dc;
-        text-decoration: none;
+            color: #3598dc;
+            text-decoration: none;
         }
-
+        
         .signup-form form a:hover {
-        text-decoration: underline;
+            text-decoration: underline;
         }
 
         .signup-form .hint-text {
-        padding-bottom: 15px;
-        text-align: center;
+            padding-bottom: 15px;
+            text-align: center;
         }
-        /*# sourceMappingURL=login.css.map */
+
+        .btn-secondary {
+            border-radius: 0px;
+            background-color: black;
+            margin-top: 10px;
+        }
+
+        .preview-wrapper {
+            width: 100%;
+            margin-top: 10px;
+            max-width: 200px;
+        }
+
+        .preview {
+            width: 100%;
+        }
     </style>
     <title>Trigariz | Sign up</title>
 </head>
@@ -201,21 +215,25 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" name="facebook" placeholder="Facebook (Optional)">
                             </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control password-input" name="password" placeholder="Password" required="required">
-                                <a class="show" style="cursor: pointer; color: blue; text-decoration: underline;">Show/hide</a>
+                            <div class="form-group" style="position: relative;width: 100%">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="required">
+                                <i style="position: absolute;
+                                top: 10px;
+                                right: 10px; cursor: pointer;" class="fa fa-eye-slash"></i>
                             </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control password-input" name="confirm_password" placeholder="Confirm Password" required="required">
-                                <a class="show" style="cursor: pointer; color: blue; text-decoration: underline;">Show/hide</a>
-                            </div>  
+                            <div class="form-group" style="position: relative;width: 100%">
+                                <input type="password" class="form-control" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required="required">
+                                <i style="position: absolute;
+                                top: 10px;
+                                right: 10px; cursor: pointer;" class="fa fa-eye-slash"></i>
+                            </div>
                         </div>
                         <div class="col-sm">
-                            <div class="form-group">
-                                Company Logo: <input type="file" class="form-control" name="logo" placeholder="Upload Logo" required="required">
+                            <div class="form-group media-upload-1">
+                                Company Logo: <input type="file" class="form-control" name="logo" placeholder="Upload Logo" required="required" accept="image/*">
                             </div>
-                            <div class="form-group">
-                                Company Registration License: <input type="file" class="form-control" name="logo" required="required">
+                            <div class="form-group media-upload-2">
+                                Company Registration License: <input type="file" class="form-control" name="logo" required="required" accept="image/*" multiple>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="address" placeholder="Company Address" required="required">
@@ -251,8 +269,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(() => {
-            $(".show").click(function() {
-                const x = $(this).parent().children(".password-input");
+            $("i").click(function() {
+                const x = $(this).parent().children("input");
+
                 
                 if (x.attr("type") === "password") {
                     x.attr("type", "text");
@@ -260,8 +279,44 @@
                     x.attr("type", "password");
                 }
             });
+
+            $(".dropdown-item").click(function() {
+                $(this).parent().parent().children("button").text($(this).text());
+            });
+
+            $(".media-upload-1 input").change(function(e) {
+                const files = [e.target.files][0];
+                $(".media-upload-1").append('<button class="btn btn-secondary">Remove attachments</button>');
+                for (let i=0;i<files.length;i++) {
+                    $(".media-upload-1").append('<div class="preview-wrapper"><img class="preview" src="#"/></div>');
+                    $(".media-upload-1 .preview-wrapper .preview").eq(i).attr('src', URL.createObjectURL(files[i]));
+
+                    $(".media-upload-1 .btn-secondary").click(function() {
+                        $(".media-upload-1 .preview-wrapper").remove();
+                        $(".media-upload-1 .btn-secondary").remove();
+                        $(".media-upload-1 input").val('');
+                    });
+                }
+            });
+
+            $(".media-upload-2 input").change(function(e) {
+                const files = [e.target.files][0];
+                $(".media-upload-2").append('<button class="btn btn-secondary">Remove attachments</button>');
+                for (let i=0;i<files.length;i++) {
+                    $(".media-upload-2").append('<div class="preview-wrapper"><img class="preview" src="#"/></div>');
+                    $(".media-upload-2 .preview-wrapper .preview").eq(i).attr('src', URL.createObjectURL(files[i]));
+
+                    $(".media-upload-2 .btn-secondary").click(function() {
+                        $(".media-upload-2 .preview-wrapper").remove();
+                        $(".media-upload-2 .btn-secondary").remove();
+                        $(".media-upload-2 input").val('');
+                    });
+                }
+            });
         });
     </script>
+    <script src="demo/preloader/preloader.js"></script>
+    <script src="demo/vote/vote.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>

@@ -29,7 +29,7 @@
             </a>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/home.html">Home</a>
                     </li>
@@ -42,7 +42,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Local Services</a>
                     </li>
-                </ul> -->
+                </ul>
             </div>
             <form class="form-inline my-2 my-lg-0">
                 <div class="user-details dropdown">
@@ -79,38 +79,10 @@
     <div class="responsive-nav">
         <i class="fa fa-times close-nav" style="color: white;float:right;padding:20px;font-size:24px;"></i>
         <div class="links-wrapper">
-            <strong class="heading">Jobs</strong>
-            <hr/>
-
-            <div class="link active" id="browseJobs">
-                <span>Browse Jobs</span>
-            </div>
-            <div class="link" id="activeJobs">
-                <span>Active Jobs</span>
-            </div>
-            <div class="link" id="completedJobs">
-                <span>Completed Jobs</span>
-            </div>
-            <div class="link" id="completedJobs">
-                <span>Payments</span>
-            </div>
-            
-            <br/>
-            <strong class="heading">Business Profile</strong>
-            <hr/>
-            <div class="link" id="viewProfile">
-                <span>View Profile</span>
-            </div>
-            <a style="color: white;text-decoration:none;" href="edit-contractor-profile.html"><div class="link" id="editProfile">
-                <span>Edit Profile</span>
-            </div></a>
-            
-            <br/>
-
             <strong class="heading">EXPLORE</strong>
             <hr/>
-
-            <div class="link active" id="community">
+            
+            <div class="link" id="community">
                 <i class="fa fa-comments" aria-hidden="true"></i>
                 <span>Community</span>
             </div>
@@ -118,12 +90,30 @@
                 <i class="fa fa-rss" aria-hidden="true"></i>
                 <span>News and Insights</span>
             </div>
-
+            
             <br/>
-
-            <div class="link promote">
-                Promote your business
+            <strong class="heading">FIND</strong>
+            <hr/>
+    
+            <div class="dropdown-link" id="services">
+                <i class="fa fa-wrench" aria-hidden="true"></i>
+                <span>Local Services</span>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <div class="dropdown-wrapper">
+                    <div class="inner-link">Post a job</div>
+                    <div class="inner-link link" id="contractors">Browse services</div>
+                </div>
             </div>
+            <div class="link" id="properties">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span>Property for Sale</span>
+            </div>
+            
+            <br/>
+    
+            <a href="contractor-register.html"><div class="link promote">
+                Promote your business
+            </div></a>
         </div>
     </div>
 
@@ -208,45 +198,10 @@
                         <div class="results"></div>
                     </div>
                     <div class="links-wrapper">
-                        <strong class="heading">Jobs</strong>
-                        <hr/>
-
-                        <div class="dropdown-link" id="services">
-                            <i class="fa fa-wrench" aria-hidden="true"></i>
-                            <span>Jobs</span>
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="dropdown-wrapper">
-                                <div class="inner-link link active" id="browseJobs">
-                                    <span>Browse Jobs</span>
-                                </div>
-                                <div class="inner-link link" id="activeJobs">
-                                    <span>Active Jobs</span>
-                                </div>
-                                <div class="inner-link link" id="completedJobs">
-                                    <span>Completed Jobs</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="link" id="completedJobs">
-                            <span>Payments</span>
-                        </div>
-
-                        <br/>
-                        <strong class="heading">Business Profile</strong>
-                        <hr/>
-                        <div class="link" id="viewProfile">
-                            <span>View Profile</span>
-                        </div>
-                        <a style="color: rgb(47, 47, 47); text-decoration:none;" href="edit-contractor-profile.html"><div class="link" id="editProfile">
-                            <span>Edit Profile</span>
-                        </div></a>
-                        
-                        <br/>
-
                         <strong class="heading">EXPLORE</strong>
                         <hr/>
 
-                        <div class="link" id="community">
+                        <div class="link active" id="community">
                             <i class="fa fa-comments" aria-hidden="true"></i>
                             <span>Community</span>
                         </div>
@@ -254,7 +209,25 @@
                             <i class="fa fa-rss" aria-hidden="true"></i>
                             <span>News and Insights</span>
                         </div>
+                        
+                        <br/>
+                        <strong class="heading">FIND</strong>
+                        <hr/>
 
+                        <div class="dropdown-link" id="services">
+                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                            <span>Local Services</span>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <div class="dropdown-wrapper">
+                                <div class="inner-link">Post a job</div>
+                                <div class="inner-link link" id="contractors">Browse services</div>
+                            </div>
+                        </div>
+                        <div class="link" id="properties">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <span>Property for Sale</span>
+                        </div>
+                        
                         <br/>
 
                         <a href="contractor-register.html"><div class="link promote">
@@ -429,27 +402,59 @@
 
                         <div class="job-wrapper">
                             <div class="img-container">
-                                <div>
+                                <div class="img-wrapper">
                                     <img src="demo/assets/jobs/image1.jpeg">
                                 </div>
                                 <div class="details">
-                                    <span><i class="fa fa-wrench" aria-hidden="true"></i> Tile replacement</span>
                                     <span><i class="fa fa-map-marker" aria-hidden="true"></i> Kuala Lumpur</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i> Budget: RM800</span>
                                     <span><i class="fa fa-calendar" aria-hidden="true"></i> 22-9-2021</span>
                                 </div>
                             </div>
                             <div class="description">
-                                <h3>Ceiling tile replacement</h3>
+                                <h4><i class="fa fa-wrench" aria-hidden="true"></i> Tiling</h4>
                                 <p>Need ceiling tiles replaced at shop. New set tiles already purchased. New color and design.</p>
                                 <p>Size: 300 square feet</p>
+                                <p>Property type: Commercial, Highrise</p>
                             </div>
                             <div class="contact">
                                 <p style="font-weight: bold;"><i class="fa fa-user" aria-hidden="true"></i> Najmuddin</p>
                                 <strong>Address:</strong>
                                 <p class="text-muted">B03-A-07-1, Menara 3A, No.3, Eco City, 59200, Jalan Bangsar, 59200 Kuala Lumpur</p>
                                 <button class="btn btn-primary btn-block">Give Quote</button>
-                                <button class="btn btn-success btn-block"><i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp</button>
+                                <div class="btn-container">
+                                    <button class="btn btn-success btn-block" style="margin-right: 2px; margin-top: 4px""><i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp</button>
+                                    <button class="btn btn-success btn-block"style="margin-left: 2px; margin-top: 4px"><i class="fa fa-paper-plane" aria-hidden="true"></i> Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="job-wrapper">
+                            <div class="img-container">
+                                <div class="img-wrapper">
+                                    <img src="demo/assets/jobs/image2.webp">
+                                </div>
+                                <div class="details">
+                                    <span><i class="fa fa-map-marker" aria-hidden="true"></i> Kuala Lumpur</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i> Budget: RM1100</span>
+                                    <span><i class="fa fa-calendar" aria-hidden="true"></i> 23-9-2021</span>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <h4><i class="fa fa-wrench" aria-hidden="true"></i> Painting</h4>
+                                <p>Need to paint 3 rooms in home. Drywall ready, paint also ready. </p>
+                                <p>Size: 300 square feet</p>
+                                <p>Property type: Residential, Landed</p>
+                            </div>
+                            <div class="contact">
+                                <p style="font-weight: bold;"><i class="fa fa-user" aria-hidden="true"></i> Alex</p>
+                                <strong>Address:</strong>
+                                <p class="text-muted">B03-A-07-1, Menara 3A, No.3, Eco City, 59200, Jalan Bangsar, 59200 Kuala Lumpur</p>
+                                <button class="btn btn-primary btn-block">Give Quote</button>
+                                <div class="btn-container">
+                                    <button class="btn btn-success btn-block" style="margin-right: 2px; margin-top: 4px""><i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp</button>
+                                    <button class="btn btn-success btn-block"style="margin-left: 2px; margin-top: 4px"><i class="fa fa-paper-plane" aria-hidden="true"></i> Message</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -520,6 +525,22 @@
                 const activeImg = $(this).children(".active").children("img");
                 $("#imageModal").modal("show");
                 $("#imageModal .modal-body img").attr("src", activeImg.attr("src"));
+            });
+
+            $(".browseJobs .img-container img").click(function() {
+                const activeImg = $(this);
+                $("#imageModal").modal("show");
+                $("#imageModal .modal-body img").attr("src", activeImg.attr("src"));
+            });
+            
+            $(".actions .upvote").click(function(e) {
+                $(this).parent().children(".downvote").removeClass("active");
+                $(this).addClass("active");
+            });
+            
+            $(".actions .downvote").click(function(e) {
+                $(this).parent().children(".upvote").removeClass("active");
+                $(this).addClass("active");
             });
         });
     </script>

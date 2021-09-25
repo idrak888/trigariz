@@ -2,9 +2,9 @@
   background-color: white;
   border-radius: 6px;
   width: 100%;
-  margin-top: 15px;
-  -webkit-filter: drop-shadow(0 0 0.3rem #e3e3e3);
-          filter: drop-shadow(0 0 0.3rem #e3e3e3);
+  margin-top: 20px;
+  border: 1px solid #dadada;
+  color: #353535;
 }
 
 .browseJobs .job-wrapper .img-container {
@@ -24,14 +24,17 @@
   padding: 15px 10px;
 }
 
-.browseJobs .job-wrapper .img-container div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.browseJobs .job-wrapper .img-container .img-wrapper {
+  width: 200px;
+  height: 130px;
+  background-color: black;
 }
 
-.browseJobs .job-wrapper .img-container div img {
-  width: 100%;
+.browseJobs .job-wrapper .img-container .img-wrapper img {
+  width: 200px;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .browseJobs .job-wrapper .img-container .details {
@@ -44,14 +47,36 @@
 .browseJobs .job-wrapper .img-container .details span {
   display: block;
   margin-top: 10px;
+  color: #5a5a5a;
+}
+
+@media only screen and (max-width: 600px) {
+  .browseJobs .job-wrapper .img-container .details {
+    padding: 0 10px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .browseJobs .job-wrapper .img-container .details span {
+    display: block;
+    margin-top: 5px;
+    color: #5a5a5a;
+    font-size: 14px;
+  }
 }
 
 .browseJobs .job-wrapper .description {
   padding: 10px 15px;
 }
 
-.browseJobs .job-wrapper .description h3 {
+.browseJobs .job-wrapper .description h4 {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .browseJobs .job-wrapper .description h4 {
+    font-size: 18px;
+  }
 }
 
 .browseJobs .job-wrapper .contact {
@@ -60,6 +85,36 @@
 }
 
 .browseJobs .job-wrapper .contact .btn-primary {
+  margin: auto;
   background-color: #0097ae;
+  width: 100%;
+  max-width: 500px;
+}
+
+.browseJobs .job-wrapper .contact .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  max-width: 500px;
+}
+
+.browseJobs .job-wrapper .contact .btn-container a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: white;
+  width: 100%;
+  border-radius: 4px;
 }
 /*# sourceMappingURL=browse-jobs.css.map */

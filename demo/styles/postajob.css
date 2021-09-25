@@ -9,6 +9,12 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .col-md-9 .main-wraper {
+    margin-top: 50px;
+  }
+}
+
 .col-md-9 .row {
   padding: 0;
   margin: 20px 0;

@@ -2,6 +2,56 @@ $primary-color: rgb(0, 151, 174);
 $secondary-color: rgb(53, 53, 53);
 
 .contractors {
+    .contractors-filter {
+        width: 100%;
+        padding: 30px;
+        background-color: rgb(25, 106, 199);
+        margin-top: 15px;
+        border-radius: 6px;
+        h5 {
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+            margin-left: 5px;
+        }
+        .btn {
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 200px;
+        }
+        .dropdown-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .dropdown {
+                padding: 0 5px;
+                flex: 1;
+                cursor: pointer;
+                text-align: center;
+                button {
+                    border-radius: 6px;
+                    border: none;
+                    cursor: pointer;
+                    max-width: 250px;
+                }
+                .dropdown-item {
+                    width: 200px;
+                }
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+            padding: 20px 10px;
+            .dropdown {
+                margin-top: 10px;
+                button, .dropdown-item {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
     .contractor {
         display: flex;
         flex-direction: column;
@@ -10,7 +60,6 @@ $secondary-color: rgb(53, 53, 53);
         border-radius: 8px;
         overflow: hidden;
         margin-top: 15px;
-        filter: drop-shadow(0 0 0.4rem rgb(227, 227, 227));
         .info {
             display: flex;
             flex-direction: row;
@@ -33,26 +82,34 @@ $secondary-color: rgb(53, 53, 53);
             p {
                 font-weight: bold;
             }
-            .btn {
-                background-color: $primary-color;
-                color: white;
-                width: 100%;
-                max-width: 250px;
-                border-radius: 8px;
+            .btn-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                max-width: 300px;
+                margin: auto;
+                .btn {
+                    flex: 1;
+                    background-color: $primary-color;
+                    color: white;
+                    width: 100%;
+                    max-width: 250px;
+                    border-radius: 4px;
+                    margin: 3px;
+                }
             }
         }
-        .contact {
+        .rating {
             display: flex;
             flex-direction: row;
             background-color: white;
             padding: 20px 10px;
             justify-content: center;
             align-items: center;
-            span {
-                margin: 0 10px;
-                i {
-                    margin: 0 5px;
-                }
+            i {
+                margin: 0 3px;
+                color: rgb(255, 217, 0);
             }
         }
         @media only screen and (max-width: 1100px) {

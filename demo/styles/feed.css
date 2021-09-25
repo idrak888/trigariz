@@ -735,7 +735,9 @@ body {
 }
 
 .wrapper .row .col-md-6 .community .post .carousel .carousel-inner img {
-  vertical-align: middle;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wrapper .row .col-md-6 .community .post .row {
@@ -815,6 +817,12 @@ body {
   color: grey;
 }
 
+@media only screen and (max-width: 500px) {
+  .wrapper .row .col-md-6 .community .post .actions .upvote, .wrapper .row .col-md-6 .community .post .actions .downvote, .wrapper .row .col-md-6 .community .post .actions .comment, .wrapper .row .col-md-6 .community .post .actions .report, .wrapper .row .col-md-6 .community .post .actions .share {
+    font-size: 15px;
+  }
+}
+
 .wrapper .row .col-md-6 .community .post .actions .like-counter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -833,10 +841,27 @@ body {
   color: grey;
 }
 
+@media only screen and (max-width: 500px) {
+  .wrapper .row .col-md-6 .community .post .actions .like-counter span {
+    display: none;
+    font-size: 8px;
+  }
+}
+
 .wrapper .row .col-md-6 .community .post .actions .upvote, .wrapper .row .col-md-6 .community .post .actions .downvote {
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+  .wrapper .row .col-md-6 .community .post .actions .upvote, .wrapper .row .col-md-6 .community .post .actions .downvote {
+    margin: 10px;
+  }
+}
+
+.wrapper .row .col-md-6 .community .post .actions .active i {
+  color: #0097ae;
 }
 
 .wrapper .row .col-md-6 .community .post .comment-section {
